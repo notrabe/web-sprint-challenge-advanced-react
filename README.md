@@ -30,13 +30,46 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+Stateful class components must contain a state object, like this:
+
+Class Component extends React.Component {
+  constructor () {
+    super()
+    this.state = 'something'
+  }
+
+  render() {
+    return 'I am a class component'
+  }
+}
+
 2. Describe the different phases of the component lifecycle.
+
+Mounting - putting elements into the DOM.
+
+Updating - Whenever there is a changein the component's state of props.
+
+Unmounting - Removing an element from the   DOM.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+constructor() is the first method called before anything else, when the component is intitated. It is the place to set up the initial values of the component.
+
+componentDidMount() is called after the component is rendered. This is where you run statements that require the component to already be in the DOM.
+
+componentWillUnmount() is called when the component is about to be removed from the DOM.
+
 4. Define stateful logic.
 
+Stateful logic is any code that uses state. State is used to store property values for its parent component, and when these values change, the component will re-render.
+
 5. Describe how to test a React component with React Testing Library.
+
+describe('component', () => {
+  test('does the following', () => {
+ 
+  });
+});
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -62,7 +95,7 @@ _Please follow the setup instructions closely so that you can get everything up 
 **Starting the server**
 
 - [ ] Run `npm install` to download dependencies for the server.
-- [ ] Run the server using `npm start`.
+- [ ] Run the server using `npm start`
 - [ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
 
 **Starting the React app**
